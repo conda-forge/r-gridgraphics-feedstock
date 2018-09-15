@@ -14,7 +14,8 @@ source:
   sha256: 1a3ffe5dcf8363db5eee69dfd5bee907d5a88754a0067a4f407dc082377524dd
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -22,6 +23,7 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
   run:
@@ -54,3 +56,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
