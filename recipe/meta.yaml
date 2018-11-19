@@ -14,9 +14,9 @@ source:
   sha256: 1a3ffe5dcf8363db5eee69dfd5bee907d5a88754a0067a4f407dc082377524dd
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -42,8 +42,7 @@ about:
     plot, but consists of 'grid' grobs and viewports that can then be manipulated with  'grid'
     functions (e.g., edit grobs and revisit viewports).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
