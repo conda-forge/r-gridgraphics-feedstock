@@ -1,4 +1,4 @@
-{% set version = '0.4-1' %}
+{% set version = "0.5-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gridGraphics_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gridGraphics/gridGraphics_{{ version }}.tar.gz
-  sha256: b770127b71664bbf67f8853a2666c071f2b9920743eddc9f3a58ecb948b923cf
+  sha256: 393043b3cd3a186d6cc12456a7e969b8fb81b792c4a2e6d677d94d34fb609e66
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,12 +36,10 @@ test:
 about:
   home: https://github.com/pmur002/gridgraphics
   license: GPL (>= 2)
-  summary: Functions to convert a page of plots drawn with the  'graphics' package into identical
-    output drawn with the 'grid' package. The result looks like the original 'graphics'-based
-    plot, but consists of 'grid' grobs and viewports that can then be manipulated with  'grid'
-    functions (e.g., edit grobs and revisit viewports).
+  summary: Functions to convert a page of plots drawn with the  'graphics' package into identical output drawn with the 'grid' package. The result looks like the
+    original 'graphics'-based plot, but consists of 'grid' grobs and viewports that can then be manipulated with  'grid' functions (e.g., edit grobs and revisit viewports).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
