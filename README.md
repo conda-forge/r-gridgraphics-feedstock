@@ -1,11 +1,11 @@
-About r-gridgraphics
-====================
+About r-gridgraphics-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gridgraphics-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pmur002/gridgraphics
 
 Package license: GPL (>= 2)
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gridgraphics-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions to convert a page of plots drawn with the  'graphics' package into identical output drawn with the 'grid' package. The result looks like the original 'graphics'-based plot, but consists of 'grid' grobs and viewports that can then be manipulated with  'grid' functions (e.g., edit grobs and revisit viewports).
 
